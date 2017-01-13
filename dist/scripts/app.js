@@ -1,13 +1,9 @@
 (function(){
-var app = angular.module('blocChat', []);
-
-app.filter('greet', function() {
- return function(name) {
-    return 'Hello, ' + name + '!';
-  };
-});
-    
-    function config($stateProvider){ 
+    console.log("Hello.")
+    function config($stateProvider, $locationProvider){ 
+        
+        $locationProvider
+            .html5Mode({enabled: true, requireBase: false})
         
         $stateProvider
             .state('home', {
